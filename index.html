@@ -106,10 +106,10 @@
     </div>
     
     <script>
-        function calculateFare(isDiscounted) {
+        function calculateFare(Discounted) {
             let baseFare = 28.00;
             let discountRate = 0.2; // 20% discount
-            let finalFare = isDiscounted ? baseFare * (1 - discountRate) : baseFare;
+            let finalFare = Discounted ? baseFare * (1 - discountRate) : baseFare;
             document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
         }
     </script>
