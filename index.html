@@ -56,6 +56,7 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link text-white" href="Home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="TrainSchedule.html">Train Schedule</a></li>
+                   
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2 rounded-pill" type="text" placeholder="Search...">
@@ -65,15 +66,14 @@
         </div>
     </nav>
     
-    <br>
-    <br>
-    <br>
+  <br>
+  <br>
+  <br>
     
     <div class="container">
         <div class="row">
-            <!-- Increase the size of the image -->
             <div class="col-md-4">
-                <img src="https://d3i71xaburhd42.cloudfront.net/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" alt="Train Map" class="img-fluid rounded-3" style="max-width: 100%; height: 600px;"> <!-- Adjusted height for larger image -->
+                <img src="https://d3i71xaburhd42.cloudfront.net/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" alt="Train Map" class="img-fluid rounded-3">
             </div>
             <div class="col-md-4 fare-section">
                 <label class="fw-bold text-white bg-dark p-2 d-block rounded-3">LEAVING FROM:</label>
@@ -127,6 +127,15 @@
             document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
         }
     </script>
+      <script>
+        function calculateFare(Discounted) {
+            let baseFare = 13.00;
+            let discountRate = 0.2; 
+            let finalFare = Discounted ? baseFare * (1 - discountRate) : baseFare;
+            document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
+        }
+    </script>
+    
 </body>
 </html>
 
