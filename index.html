@@ -119,13 +119,20 @@
     
     <script>
         function calculateFare(Discounted) {
-            let baseFare = 28.00;
+            let baseFare = 13.00;
             let discountRate = 0.2; 
             let finalFare = Discounted ? baseFare * (1 - discountRate) : baseFare;
             document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
         }
     </script>
-    
+      <script>
+        function calculateFare(Discounted) {
+            let baseFare = 13.00;
+            let discountRate = 0.2; 
+            let finalFare = Discounted ? baseFare * (1 - discountRate) : baseFare;
+            document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
+        }
+    </script>
     
 </body>
 </html>
