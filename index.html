@@ -93,7 +93,7 @@
                 
                 <label class="fw-bold text-white bg-dark p-2 d-block rounded-3">GOING TO:</label>
                 <select class="form-control mb-3 rounded-pill" id="toStation">
-                    <option value ="">North Avenue</option>
+                    <option value ="">North Ave.</option>
                     <option value ="">Quezon Avenue</option>
                     <option value ="">GMA Kamuning</option>
                     <option value ="">Areneta Center - Cubao</option>
@@ -120,7 +120,7 @@
     <script>
         function calculateFare(Discounted) {
             let baseFare = 28.00;
-            let discountRate = 0.2; // 20% discount
+            let discountRate = 0.2; 
             let finalFare = Discounted ? baseFare * (1 - discountRate) : baseFare;
             document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
         }
