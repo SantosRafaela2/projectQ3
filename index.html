@@ -43,6 +43,10 @@
         button {
             border-radius: 12px;
         }
+        .large-img {
+            width: 100%;
+            max-width: 900px;  /* Adjust max width as needed */
+        }
     </style>
 </head>
 <body>
@@ -56,9 +60,10 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link text-white" href="Home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="TrainSchedule.html">Train Schedule</a></li>
-                   
-                
-                    
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2 rounded-pill" type="text" placeholder="Search...">
+                    <button class="btn btn-warning rounded-pill" type="button">Search</button>
                 </form>
             </div>
         </div>
@@ -71,41 +76,41 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <img src="https://d3i71xaburhd42.cloudfront.net/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" alt="Train Map" class="img-fluid rounded-3">
+                <img src="https://d3i71xaburhd42.cloudfront.net/b928344892954bcf2e820828e12736f14f591fb1/6-Figure3-1.png" alt="Train Map" class="img-fluid rounded-3 large-img">
             </div>
             <div class="col-md-4 fare-section">
                 <label class="fw-bold text-white bg-dark p-2 d-block rounded-3">LEAVING FROM:</label>
                 <select class="form-control mb-3 rounded-pill" id="fromStation">
-                    <option value ="0" >North Ave.</option>
-                    <option value ="0">Quezon Avenue</option>
-                    <option value ="0">GMA Kamuning</option>
-                    <option value ="3">Areneta Center - Cubao</option>
-                    <option value ="3">Santolan - Annapolis</option>
-                    <option value ="7">Ortigas</option>
-                    <option value ="7">Shaw Boulevard</option>
-                    <option value ="7">Boni</option>
-                    <option value ="11">Guadalupe</option>
-                    <option value ="11">Buendia</option>
-                    <option value ="11">Ayala</option>
-                    <option value ="15">Magallanes</option>
-                    <option value ="15">Taft Avenue</option>
+                    <option value="0">North Ave.</option>
+                    <option value="0">Quezon Avenue</option>
+                    <option value="0">GMA Kamuning</option>
+                    <option value="3">Areneta Center - Cubao</option>
+                    <option value="3">Santolan - Annapolis</option>
+                    <option value="7">Ortigas</option>
+                    <option value="7">Shaw Boulevard</option>
+                    <option value="7">Boni</option>
+                    <option value="11">Guadalupe</option>
+                    <option value="11">Buendia</option>
+                    <option value="11">Ayala</option>
+                    <option value="15">Magallanes</option>
+                    <option value="15">Taft Avenue</option>
                 </select>
                 
                 <label class="fw-bold text-white bg-dark p-2 d-block rounded-3">GOING TO:</label>
                 <select class="form-control mb-3 rounded-pill" id="toStation">
-                    <option value ="0" >North Ave.</option>
-                    <option value ="0">Quezon Avenue</option>
-                    <option value ="0">GMA Kamuning</option>
-                    <option value ="3">Areneta Center - Cubao</option>
-                    <option value ="3">Santolan - Annapolis</option>
-                    <option value ="7">Ortigas</option>
-                    <option value ="7">Shaw Boulevard</option>
-                    <option value ="7">Boni</option>
-                    <option value ="11">Guadalupe</option>
-                    <option value ="11">Buendia</option>
-                    <option value ="11">Ayala</option>
-                    <option value ="15">Magallanes</option>
-                    <option value ="15">Taft Avenue</option>
+                    <option value="0">North Ave.</option>
+                    <option value="0">Quezon Avenue</option>
+                    <option value="0">GMA Kamuning</option>
+                    <option value="3">Areneta Center - Cubao</option>
+                    <option value="3">Santolan - Annapolis</option>
+                    <option value="7">Ortigas</option>
+                    <option value="7">Shaw Boulevard</option>
+                    <option value="7">Boni</option>
+                    <option value="11">Guadalupe</option>
+                    <option value="11">Buendia</option>
+                    <option value="11">Ayala</option>
+                    <option value="15">Magallanes</option>
+                    <option value="15">Taft Avenue</option>
                 </select>
                 
                 <button class="btn btn-primary rounded-pill" onclick="calculateFare(false)">Regular Fare</button>
@@ -125,17 +130,5 @@
             document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
         }
     </script>
-      <script>
-        function calculateFare(Discounted) {
-            let baseFare = 13.00;
-            let discountRate = 0.2; 
-            let finalFare = Discounted ? baseFare * (1 - discountRate) : baseFare;
-            document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
-        }
-    </script>
-    
 </body>
 </html>
-
- 
-
