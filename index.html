@@ -9,6 +9,7 @@
         body {
             background-color: #ffcc00;
             font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin-bottom: 100px; /* Adds space for footer */
         }
         .navbar {
             background-color: #ff6600;
@@ -47,6 +48,24 @@
             width: 100%;
             max-width: 900px; 
         }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #0033cc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            border-top: 3px solid #ff6600;
+        }
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +80,6 @@
                     <li class="nav-item"><a class="nav-link text-white" href="Home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="TrainSchedule.html">Train Schedule</a></li>
                 </ul>
-                
             </div>
         </div>
     </nav>
@@ -127,5 +145,11 @@
             document.getElementById("ticketPrice").innerText = finalFare.toFixed(2);
         }
     </script>
+
+
+    <div class="footer">
+         <a href="https://docs.google.com/document/d/1PbXLq1GnqbkI6MFrUQ6h3dh4ZVBYUOGEZoKweW1nNoM/edit?usp=sharing" target="_blank">References</a>
+    </div>
+
 </body>
 </html>
